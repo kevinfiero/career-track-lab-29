@@ -5,3 +5,7 @@
   border: 5px solid black;
 }
 
+.Request .input[type="button"]{
+  color: blue;
+  margin: .75rem .25rem .75rem .25rem;
+}
