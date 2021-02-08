@@ -3,7 +3,16 @@
   height: 10rem;
   width: 40rem;
   border: 5px solid black;
+}
+
+.Request .row{
   display: flex;
+  flex-direction: row;
+}
+
+.Request .column{
+  display: flex;
+  flex-direction: column;
 }
 
 .Request .input{
@@ -26,14 +35,35 @@
 .Request .label{
   z-index: 1;
   width: 4rem;
-
 }
 
-.Request .button{
+.Request .radiobutton{
   width: 4rem;
   height: 1.5rem;
   z-index: 1;
   border: 1px solid #CCC;
   text-align: center;
-  margin: 1rem .5rem 1rem .5rem;
+  margin: .65rem .65rem .65rem .65rem;
+}
+
+.Request .urlinput{
+  height: 1.25rem;
+  width: 25rem;
+  margin: 1rem;
+}
+
+.Request .submitbutton{
+  height: 1.5rem;
+  margin: 1rem;
+}
+
+.Request .center{
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.Request .textinput{
+  height: 5rem;
 }

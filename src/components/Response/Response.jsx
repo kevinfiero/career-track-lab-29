@@ -1,16 +1,18 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import ReactJson from 'react-json-view';
 import styles from './Response.css';
 
 
-const Response = () => (
+const Response = ({ response }) => (
   <div className = {styles.Response}>
-    <h1>Response Section</h1>
+    <ReactJson src={response} />
   </div>
 );
 
-// Header.propTypes = {
+Response.propTypes = {
+  response: PropTypes.string.isRequired
 
-// };
+};
 
 export default Response;

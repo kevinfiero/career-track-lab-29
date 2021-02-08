@@ -3,23 +3,34 @@ import Header from '../components/Header/Header';
 import History from '../components/History/History';
 import Request from '../components/Request/Request';
 import Response from '../components/Response/Response';
+import { getResponse } from '../services/responseApi';
 import styles from './RESTY.css';
 
 export default class RESTY extends Component {
   state = {
 
-    button: 'GET'
+    button: 'GET',
+    url: '',
+    inputField: '',
+    response: ''
 
   }
 
-  handleRadioChange = ({ target }) => {
+  fetchResponse = () => {
+    getResponse(this.state.url).then(response => 
+      this.setState({ response }));
+  }
+
+  handleChange = ({ target }) => {
     console.log(target.value);
-    this.setState({ button: target.value });
+    this.setState({ [target.name]: target.value });
   }
 
   render() {
 
-    const { button } = this.state;
+    const { button, url, inputField, response } = this.state;
+
+    console.log(response);
 
     return (
       <>
@@ -31,8 +42,13 @@ export default class RESTY extends Component {
               <section className = {styles.column}>
                 <Request 
                   button={button} 
-                  onRadioChange = {this.handleRadioChange} />
-                <Response />
+                  url={url}
+                  inputField={inputField}
+                  response={response}
+                  onChange = {this.handleChange} 
+                  onClick = {this.fetchResponse}
+                />
+                <Response response={response} />
               </section>
             </section>
           </section>
