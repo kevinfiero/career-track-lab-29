@@ -3,9 +3,37 @@
   height: 10rem;
   width: 40rem;
   border: 5px solid black;
+  display: flex;
 }
 
-.Request .input[type="button"]{
+.Request .input{
+  display: block;
+  align-self: center;
+  position: absolute;
+  width: 4rem;
+  height: 1rem;
+  z-index: 100;
+  cursor: pointer;
+  opacity: 0.01;
+}
+
+.Request .input[type="radio"]:checked+label{
   color: blue;
-  margin: .75rem .25rem .75rem .25rem;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.Request .label{
+  z-index: 1;
+  width: 4rem;
+
+}
+
+.Request .button{
+  width: 4rem;
+  height: 1.5rem;
+  z-index: 1;
+  border: 1px solid #CCC;
+  text-align: center;
+  margin: 1rem .5rem 1rem .5rem;
 }

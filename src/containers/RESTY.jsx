@@ -8,9 +8,18 @@ import styles from './RESTY.css';
 export default class RESTY extends Component {
   state = {
 
+    button: 'GET'
+
+  }
+
+  handleRadioChange = ({ target }) => {
+    console.log(target.value);
+    this.setState({ button: target.value });
   }
 
   render() {
+
+    const { button } = this.state;
 
     return (
       <>
@@ -20,7 +29,9 @@ export default class RESTY extends Component {
             <section className = {styles.row}>
               <History />
               <section className = {styles.column}>
-                <Request />
+                <Request 
+                  button={button} 
+                  onRadioChange = {this.handleRadioChange} />
                 <Response />
               </section>
             </section>
