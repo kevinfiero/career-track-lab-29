@@ -1,17 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactJson from 'react-json-view';
 import styles from './Response.css';
+import ReactJson from 'react-json-view';
 
 
 const Response = ({ response }) => (
   <div className = {styles.Response}>
-    <ReactJson src={response} />
+    <h1>Response</h1>
+    { (response === '') 
+      ? <div></div>
+      : <ReactJson src={response}/>
+    }
+    
   </div>
 );
 
 Response.propTypes = {
-  response: PropTypes.string.isRequired
+  response: 
+    PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired
 
 };
 
