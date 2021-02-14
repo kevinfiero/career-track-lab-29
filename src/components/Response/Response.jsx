@@ -17,7 +17,7 @@ const Response = ({ response }) => (
 
 Response.propTypes = {
   response: 
-    PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired
+    PropTypes.oneOfType([PropTypes.object, PropTypes.string])
 
 };
 
