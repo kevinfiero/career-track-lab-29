@@ -11,7 +11,7 @@ export default class RESTY extends Component {
     button: 'GET',
     url: '',
     inputField: '',
-    response: ''
+    response: {}
   }
 
   fetchResponse = () => {
@@ -35,7 +35,6 @@ export default class RESTY extends Component {
           <section className = {styles.column}>
             <Header />
             <section className = {styles.row}>
-              {/* <History /> */}
               <section className = {styles.column}>
                 <Request 
                   button={button} 

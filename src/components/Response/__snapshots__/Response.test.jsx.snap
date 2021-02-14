@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Response component renders Response 1`] = `
+<DocumentFragment>
+  <div
+    class="Response"
+  >
+    <h1>
+      Response
+    </h1>
+    <div />
+  </div>
+</DocumentFragment>
+`;
