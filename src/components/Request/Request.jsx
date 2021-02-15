@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Request.css';
 
-
 const Request = ({ button, url, inputField, onChange, onClick }) => (
   <div className = {styles.Request}>
     <div className = {styles.row}>
