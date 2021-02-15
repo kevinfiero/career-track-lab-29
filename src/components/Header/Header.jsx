@@ -1,17 +1,31 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-import styles from './Header.css';
+import styled from 'styled-components';
+
+
+const Section = styled.section`
+border: 5px solid black;
+align-content: center;
+align-items: center;
+justify-content: center;
+justify-items: center;
+height: 6rem;
+width: 60rem;
+`;
+
+const Text = styled.h1`
+color: green;
+font-size: 2rem;
+text-align: center;
+vertical-align: middle;
+`;
+
 
 const Header = () => (
-  <div className ={styles.Header}>
-    <section className = {styles}>
-      <h1 className ={styles}>Welcome to RESTY!</h1>
-    </section>
+  <div>
+    <Section>
+      <Text>Welcome to RESTY!</Text>
+    </Section>
   </div>
 );
-
-// Header.propTypes = {
-
-// };
 
 export default Header;

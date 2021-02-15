@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from '../components/Header/Header';
-//import History from '../components/History/History';
 import Request from '../components/Request/Request';
 import Response from '../components/Response/Response';
 import { getResponse } from '../services/responseApi';
